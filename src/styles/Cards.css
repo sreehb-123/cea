@@ -1,0 +1,24 @@
+.cards-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.custom-card{
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.custom-card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@media(max-width: 576px){
+    .custom-card{
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,31 @@
+.hero-section{
+    background-image: url('../../public/A-Building-with-Glass-Front.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: #ffffff;
+}
+
+.hero-text{
+    font-size: 5rem;
+    font-weight: bold;
+    color: blanchedalmond;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+@media(max-width: 768px){
+    .hero-text{
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 425px){
+    .hero-text{
+        font-size: 3.5rem;
+    }
+}
