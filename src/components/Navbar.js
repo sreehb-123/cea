@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
-const NavigationBar = () => {
+const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
             <div className="container">
                 <Link className="navbar-brand" to="/">CEA</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,4 +73,4 @@ const NavigationBar = () => {
     );
 };
 
-export default NavigationBar;
+export default Navbar;
