@@ -17,6 +17,7 @@ const Navbar = () => {
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="aboutDropdown">
                                 <li><Link className="dropdown-item" to="/about/members">Members</Link></li>
+                                <li class="dropdown-divider"></li>
                                 <li><Link className="dropdown-item" to="/about/goals">Goals</Link></li>
                             </ul>
                         </li>
@@ -27,6 +28,7 @@ const Navbar = () => {
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="downloadsDropdown">
                                 <li><Link className="dropdown-item" to="/downloads/annual-report">Annual Report</Link></li>
+                                <li class="dropdown-divider"></li>
                                 <li><Link className="dropdown-item" to="/downloads/events-brochure">Events Brochure</Link></li>
                             </ul>
                         </li>
@@ -37,7 +39,9 @@ const Navbar = () => {
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="eventsDropdown">
                                 <li><Link className="dropdown-item" to="/events/past">Past</Link></li>
+                                <li class="dropdown-divider"></li>
                                 <li><Link className="dropdown-item" to="/events/present">Present</Link></li>
+                                <li class="dropdown-divider"></li>
                                 <li><Link className="dropdown-item" to="/events/future">Future</Link></li>
                             </ul>
                         </li>
@@ -52,9 +56,13 @@ const Navbar = () => {
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="connectDropdown">
                                 <li><a className="dropdown-item" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                                <li class="dropdown-divider"></li>
                                 <li><a className="dropdown-item" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                                <li class="dropdown-divider"></li>
                                 <li><a className="dropdown-item" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                                <li class="dropdown-divider"></li>
                                 <li><a className="dropdown-item" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                                <li class="dropdown-divider"></li>
                                 <li><a className="dropdown-item" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a></li>
                             </ul>
                         </li>

@@ -1,11 +1,6 @@
 .faculty-card{
-    transition: transform 0.3s ease;
     max-width: 280px;
     width: 100%;
-}
-
-.faculty-card:hover{
-    transform: translateY(-5px);
 }
 
 .faculty-img{
@@ -17,4 +12,9 @@
 .btn-primary{
     background-color: #89288f !important;
     border-color: #fff !important;
+}
+
+.btn-primary:hover{
+    background-color: #ffffff !important;
+    color: black !important;
 }

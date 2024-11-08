@@ -1,5 +1,7 @@
 .custom-navbar{
     background-color: #89288f !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
 }
 
 .custom-navbar .navbar-brand,
@@ -8,13 +10,57 @@
     font-family: Roboto,sans-serif;
     font-weight: 450;
     font-size: 18px;
+    transition: transform 0.2s ease;
 }
 
-.custom-navbar .nav-link:hover{
+.custom-navbar .nav-link:hover,
+.custom-navbar .navbar-brand:hover{
     color: #faa519 !important;
+    transform: translateY(-2px);
+}
+
+.custom-navbar .dropdown-toggle:hover{
+    cursor: text;
 }
 
 .custom-navbar .navbar-nav{
     flex-grow: 1;
     justify-content: space-around;
+}
+
+.custom-navbar .dropdown-item{
+    transition: transform 0.2s ease;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.custom-navbar .dropdown-item:hover{
+    transform: translateX(3.5px);
+    color: #faa519;
+    width: 90%;
+}
+
+.custom-navbar .dropdown-menu{
+    font-size: 18px;
+    min-width: 200px;
+    border-radius: 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.custom-navbar .nav-item.dropdown:hover .dropdown-menu{
+    border-top: 3px solid #faa519;
+    display: block;
+    margin-top: 0;
+}
+
+.custom-navbar .dropdown-toggle::after{
+    content: none;
+}
+
+.custom-navbar .navbar-brand:hover{
+    border-bottom: 2px solid #faa519;
 }
