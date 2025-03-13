@@ -115,7 +115,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
     .hexagon{
         clip-path: none;
     }
@@ -136,6 +136,12 @@
     flex: 1;
 }
 
-.faculties-container{
-    margin-bottom: 5%;
+.login-btn{
+    border: none;
+    background-color: #89288f;
+    color: #faa519;
+    padding: 10px;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10%; 
 }

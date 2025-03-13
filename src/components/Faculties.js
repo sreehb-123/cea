@@ -7,15 +7,14 @@ import axios from 'axios';
 const Faculties = () => {
     const navigate = useNavigate();
 
-    const handleClick = (facultyId,facultyAddlRole) => {
-        if(facultyAddlRole === "Director"){
-            window.open("https://iitdh.ac.in","_blank");
-        } else {
-            navigate(`/facultyPage/${facultyId}`);
-        }
+    const handleClick = (facultyId) => {
+        navigate(`/facultyPage/${facultyId}`);
     };
 
-    
+    const handleLoginNav = () => {
+        navigate('/login');
+    };
+
     const [faculties,setFaculties] = useState([]);
     const [loading,setLoading] = useState(true);
     const [error,setError] = useState(null);
@@ -39,7 +38,7 @@ const Faculties = () => {
     if(error) return <div>Error: {error}</div>;
 
     return (
-        <div className="container main-container faculties-container">
+        <div className="container main-container">
             <div className="faculty-header">
                 <img src={facultyLogo} alt="Faculty" className="faculty-logo" />
                 <h1 className="faculty-text-box">Faculty</h1>
@@ -53,7 +52,7 @@ const Faculties = () => {
                     return nameA.localeCompare(nameB); // Sort names alphabetically
                 })
                 .map(faculty => (
-                    <div className="hexagon" key={faculty._id} onClick={() => handleClick(faculty._id,faculty.addlRole)}>
+                    <div className="hexagon" key={faculty._id} onClick={() => handleClick(faculty._id)}>
                         <img src={faculty.image} alt={faculty.name} className="hexagon-img" />
                         <div className="hexagon-text">
                             <h4>{faculty.name}</h4>
@@ -64,6 +63,7 @@ const Faculties = () => {
 
             </div>
 
+            <button className='mt-4 login-btn' onClick={handleLoginNav}>Login</button>
 
             
 

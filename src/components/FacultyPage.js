@@ -10,8 +10,6 @@ import Logout from './Logout';
 import ProfActivities from './ProfActivities';
 import Teaching from './Teaching';
 import Projects from './Projects';
-import PublicationsArray from './PublicationsArray';
-import Awards from './Awards';
 
 const FacultyPage = () => {
     const [isSidebarOpen,setIsSidebarOpen] = useState(false);
@@ -52,8 +50,6 @@ const FacultyPage = () => {
     const projects = facultyData.projects;
     const awards = facultyData.awards;
     const addlRole = facultyData.addlRole;
-
-    //console.log(facultyData.publicationsArray);
 
     // const handleSave = async (fieldType,editedData) => {
     //     try {
@@ -150,11 +146,11 @@ const FacultyPage = () => {
                                 <div className='prof-basic'>
                                     <h2>{facultyData.name}</h2>
                                     <h4>{facultyData.role}</h4>
-                                    {/* <ul>
+                                    <ul>
                                         {addlRole?.map((resp,index)=>(
                                             <li key={index}>{resp}</li>
                                         ))}
-                                    </ul> */}
+                                    </ul>
                                     <p>
                                         <strong>Address: </strong>
                                         {facultyData.address?.length > 0 ? (
@@ -175,7 +171,7 @@ const FacultyPage = () => {
                                     </ul>   
                                 </div>
 
-                                {/* <Logout /> */}
+                                <Logout />
                                 {/* <p>His work aims to bridge the gap between theoretical advancements and real-world applications in various domains.</p> */}
                             </div>
                         </div>
@@ -198,22 +194,12 @@ const FacultyPage = () => {
                 </section>
 
 
-                {facultyData.publicationsArray && facultyData.publicationsArray.length > 0 ? (
-                    <section id="publications">
-                        <div className="my-5">
-                            <h2 className="text-center pb-4">Publications</h2>
-                            <PublicationsArray data={facultyData.publicationsArray} />
-                        </div>
-                    </section>
-                ) : facultyData.publications && facultyData.publications.length > 0 ? (
-                    <section id="publications">
-                        <div className="my-5">
-                            <h2 className="text-center pb-4">Publications</h2>
-                            <Publications data={facultyData.publications} isEditable={isEditable} />
-                        </div>
-                    </section>
-                ) : null}
-
+                <section id='publications'>
+                    <div className='my-5'>
+                        <h2 className='text-center pb-4'>Publications</h2>
+                        <Publications data={facultyData.publications} isEditable={isEditable}/>
+                    </div>
+                </section>
 
                 <section id="prof-activities">
                     <div className="my-5">
@@ -350,10 +336,7 @@ const FacultyPage = () => {
                 </section>
 
                 <section id='projects'>
-                    <div className="my-5">
-                        <h2 className="text-center pb-4">Projects</h2>
-                        <Projects projects={projects} isEditable={isEditable}/>
-                    </div>
+                    <Projects projects={projects} isEditable={isEditable}/>
                 </section>
 
                 {/* <section id='projects'>
@@ -372,10 +355,16 @@ const FacultyPage = () => {
                     </div>
                 </section> */}
 
-                <section id="awards">
-                    <Awards awards={facultyData.awards} isEditable={isEditable}/>
+                <section id='awards'>
+                    <div className='my-5'>
+                        <h2 className='text-center pb-4'>Awards & Honors</h2>
+                        <ul>
+                            {awards?.map((award,index) => (
+                                <li key={index}>{award}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </section>
-
 
             </div>
         </div>

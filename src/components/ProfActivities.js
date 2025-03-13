@@ -7,13 +7,9 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
     const [editedData, setEditedData] = useState([]);
     const { id } = useParams();
 
-    
-
     useEffect(() => {
         setEditedData(professionalActivities);
     }, [professionalActivities]);
-
-    
 
     const handleAddHeading = () => {
         const newHeading = { headings: "New Heading", activities: [] };
@@ -53,7 +49,7 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
         try {
             const response = await axios.put(`${process.env.REACT_APP_API_URL}/update`, {
                 id,
-                field: "professionalActivities",
+                field: "activities",
                 editedData: editedData,
             });
             console.log("message:", response.data.message);
@@ -62,10 +58,6 @@ const ProfActivities = ({ professionalActivities, isEditable }) => {
             console.error("Error saving data:", error);
         }
     };
-
-    if (!professionalActivities || professionalActivities.length === 0) {
-        return <div className="text-center">No data available.</div>;
-    }
 
     return (
         <section id="prof-activities">
